@@ -1,0 +1,36 @@
+.services {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px 60px;
+
+    @include breakpoint-down("md") {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: 24px;
+
+    i {
+      color: $cyan;
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 24px;
+      color: $lightGray;
+      text-align: left;
+    }
+  }
+}

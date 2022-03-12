@@ -1,0 +1,169 @@
+.header {
+  background-image: linear-gradient(
+      to bottom,
+      rgba($red, 0.9),
+      rgba($yellow, 0.9)
+    ),
+    url("../../assets/images/banner.jpg");
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &__logo {
+    font-size: 30px;
+    font-weight: bold;
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+
+    @include breakpoint-down("lg") {
+      display: none;
+    }
+
+    &-item {
+      position: relative;
+      color: white;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 200ms ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: $yellow;
+        transition: all 200ms ease;
+      }
+
+      &:hover {
+        color: $yellow;
+
+        &::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    i {
+      color: white;
+      cursor: pointer;
+      transition: all 200ms ease;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+.hero {
+  padding-top: 120px;
+  padding-bottom: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  p {
+    font-family: "Kaushan Script", cursive;
+    font-size: 72px;
+    margin-bottom: 40px;
+
+    @include breakpoint-down("lg") {
+      font-size: 40px;
+    }
+
+    @include breakpoint-down("md") {
+      font-size: 32px;
+    }
+  }
+
+  h1 {
+    font-size: 150px;
+    text-transform: uppercase;
+    max-width: 1000px;
+    line-height: 140px;
+
+    @include breakpoint-down("lg") {
+      font-size: 100px;
+      line-height: 100%;
+    }
+
+    @include breakpoint-down("md") {
+      font-size: 64px;
+      line-height: 100%;
+    }
+  }
+
+  &__link {
+    padding: 10px 20px;
+    border: 3px solid white;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 100px;
+    transition: all 200ms ease;
+
+    &:hover {
+      color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 108px);
+  background-color: white;
+  padding: 40px 20px;
+  gap: 30px;
+  transition: all 300ms ease;
+
+  a {
+    color: $gray;
+    font-size: 16px;
+  }
+}
+
+#menuBtn {
+  @include breakpoint-up("md") {
+    display: none;
+  }
+}

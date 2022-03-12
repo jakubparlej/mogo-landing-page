@@ -1,0 +1,137 @@
+.team {
+  &__grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 100px;
+
+    @include breakpoint-down("md") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-image {
+      background-color: $cyan;
+      width: 100%;
+      height: 470px;
+      position: relative;
+    }
+
+    &-overlay {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 300ms ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba($red, 0.8), rgba($yellow, 0.8));
+        opacity: 0;
+        transition: all 300ms ease;
+      }
+
+      &:hover {
+        top: -10px;
+        left: -10px;
+
+        &::before {
+          opacity: 100%;
+        }
+
+        .team__member-links {
+          opacity: 100%;
+        }
+      }
+    }
+
+    &-links {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      opacity: 0;
+      transition: all 300ms ease;
+
+      a {
+        background-color: $yellow;
+        color: $red;
+        padding: 13px;
+        display: grid;
+        place-content: center;
+        font-size: 20px;
+        transition: all 300ms ease;
+
+        &:hover {
+          background-color: $red;
+          color: white;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-top: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $lightGray;
+      font-style: italic;
+    }
+  }
+}
+
+#matthew {
+  background-image: -webkit-image-set(
+    url("../../assets/images/matthew@1x.webp") 1x,
+    url("../../assets/images/matthew@2x.webp") 2x
+  );
+  background-image: image-set(
+    url("../../assets/images/matthew@1x.jpg") 1x,
+    url("../../assets/images/matthew@2x.jpg") 2x
+  );
+  background-size: cover;
+  background-position: 20%;
+}
+
+#christopher {
+  background-image: -webkit-image-set(
+    url("../../assets/images/christopher@1x.webp") 1x,
+    url("../../assets/images/christopher@2x.webp") 2x
+  );
+  background-image: image-set(
+    url("../../assets/images/christopher@1x.jpg") 1x,
+    url("../../assets/images/christopher@2x.jpg") 2x
+  );
+  background-size: cover;
+  background-position: 50%;
+}
+
+#michael {
+  background-image: -webkit-image-set(
+    url("../../assets/images/michael@1x.webp") 1x,
+    url("../../assets/images/michael@2x.webp") 2x
+  );
+  background-image: image-set(
+    url("../../assets/images/michael@1x.jpg") 1x,
+    url("../../assets/images/michael@2x.jpg") 2x
+  );
+  background-size: cover;
+  background-position: 50%;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Roboto";
+}
+
+hr {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #e7e7e7;
+  height: 1px;
+  border: none;
+}
+
+.contained {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 32px;
+  padding-right: 32px;
+}

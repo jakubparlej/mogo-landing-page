@@ -1,0 +1,35 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  span {
+    font-size: 24px;
+    font-family: "Kaushan Script", cursive;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  hr {
+    width: 60px;
+    height: 2px;
+    background-color: $red;
+    margin-bottom: 60px;
+    border: none;
+  }
+
+  p {
+    text-align: center;
+    color: $lightGray;
+    line-height: 24px;
+    font-size: 15px;
+    max-width: 1000px;
+  }
+}

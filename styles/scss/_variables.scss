@@ -1,0 +1,24 @@
+// Colors
+$cyan: #95e1d3;
+$green: #eaffd0;
+$yellow: #fce38a;
+$red: #f38181;
+$gray: #333333;
+$lightGray: #999999;
+
+// Breakpoints
+$breakpoints-up: (
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+  "xxl": "1400px",
+);
+
+$breakpoints-down: (
+  "sm": "575px",
+  "md": "767px",
+  "lg": "991px",
+  "xl": "1299px",
+  "xxl": "1399px",
+);

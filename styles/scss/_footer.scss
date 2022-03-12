@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include breakpoint-down("md") {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+
+    @include breakpoint-down("md") {
+      order: 1;
+    }
+
+    span {
+      color: $red;
+    }
+  }
+
+  form {
+    display: flex;
+  }
+
+  .email {
+    padding: 14px;
+    border: 1px solid #e7e7e7;
+    color: $gray;
+
+    &:focus {
+      border: none;
+      outline-color: $lightGray;
+    }
+
+    &::placeholder {
+      color: #e7e7e7;
+    }
+  }
+
+  .button {
+    background-color: $cyan;
+    border: none;
+    padding: 14px 24px;
+    color: white;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+  }
+}
