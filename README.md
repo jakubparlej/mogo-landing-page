@@ -1,4 +1,4 @@
-# Recruitment task
+# GoIT Recruitment task
 
 ![Screenshot](preview.png)
 
